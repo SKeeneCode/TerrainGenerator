@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="ui.uiController">
+    <right>
+        <VBox alignment="TOP_CENTER" prefWidth="256.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zoom"/>
+                <Slider fx:id="zoomSlider" majorTickUnit="49.0" maxWidth="-Infinity" min="1.0" showTickLabels="true"
+                        showTickMarks="true" value="10.0"/>
+            </children>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+            <padding>
+                <Insets top="16.0"/>
+            </padding>
+        </VBox>
+    </right>
+    <center>
+        <Canvas fx:id="mapCanvas" height="400.0" width="512.0" BorderPane.alignment="CENTER"/>
+    </center>
+    <bottom>
+        <HBox BorderPane.alignment="CENTER_LEFT">
+            <children>
+                <Canvas fx:id="sliceCanvas" height="100.0" width="512.0"/>
+                <VBox alignment="TOP_CENTER" prefWidth="256.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="yAxis"/>
+                        <Slider fx:id="ySlider" maxWidth="-Infinity"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
